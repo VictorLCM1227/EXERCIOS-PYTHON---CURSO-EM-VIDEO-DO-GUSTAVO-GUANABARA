@@ -1,6 +1,5 @@
 algo = input('Digite algo: ')
 
-#pesquisei alguns codigos que eu não lembrava (não lembrei os codigos ali porque não usei mais depois e acho bem inutil)
 print(f'O tipo primitivo: {type(algo)}')
 print(f'Só tem espaços? {algo.isspace()}')
 print(f'É um número? {algo.isnumeric()}')
