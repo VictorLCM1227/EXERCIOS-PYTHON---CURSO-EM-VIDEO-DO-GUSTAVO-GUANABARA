@@ -1,0 +1,6 @@
+print('-=' * 30)
+print('Analisador de Triângulos')
+print('-=' * 30)
+primeiro_segmento = float(input('Primeiro segmento: '))
+segundo_segmento = float(input('Segundo segmento: '))
+terceiro_segmento = float(input('Terceiro segmento: '))
