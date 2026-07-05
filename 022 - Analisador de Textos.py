@@ -1,0 +1,6 @@
+nome_completo = input('Digite seu nome completo: ').strip()
+print(f'Seu nome em Maiúsculas é {nome_completo.upper()}.')
+print(f'Seu nome em Maiúsculas é {nome_completo.lower()}.')
+print(f'Seu nome tem ao todo {len(nome_completo - nome_completo.conut(' '))} letras.')
+nome_separado = nome_completo.split()
+print(f'Seu primeiro nome é {nome_separado[0]} e ele tem {len(nome_separado[0])} letras.')
