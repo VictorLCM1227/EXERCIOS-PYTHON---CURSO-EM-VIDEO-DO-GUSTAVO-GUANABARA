@@ -1,0 +1,1 @@
+numero = int(input('Digite um número para calcular seu fatorial: '))
