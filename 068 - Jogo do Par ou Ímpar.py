@@ -1,16 +1,20 @@
 from random import randint
-par = true = False
 print('-=' * 30)
 print('VAMOS JOGAR PAR OU ÍMPAR')
 jogador_vitorias = 0
 while True:
+    par = impar = False
     print('-=' * 30)
     computador = randint(1, 10)
-    jogador_escolha = input('Par ou Ímpar? [P/I] ').strip().upper()[0]
+    while True:
+        jogador_escolha = input('Par ou Ímpar? [P/I] ').strip().upper()[0]
+        if jogador_escolha in 'PI':
+            break
+        print('Opção Inválida.')
     jogador_jogada = int(input('Diga um valor: '))
     print('-' * 30)
     total = jogador_jogada + computador
-    print(f'Você jogou {jogador_jogada} e o compuatdor {computador}. Total de {total}', end=' ')
+    print(f'Você jogou {jogador_jogada} e o computador {computador}. Total de {total}', end=' ')
     if total % 2 == 0:
         print('DEU PAR')
         par = True
@@ -34,4 +38,3 @@ while True:
             break
     print('Vamos jogar novamente...')
 print(f'GAME OVER! Você venceu {jogador_vitorias} vezes.')
-#TERMINAR
