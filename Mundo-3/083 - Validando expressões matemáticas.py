@@ -1,0 +1,1 @@
+expressao = input('Digite sua expressão: ')
