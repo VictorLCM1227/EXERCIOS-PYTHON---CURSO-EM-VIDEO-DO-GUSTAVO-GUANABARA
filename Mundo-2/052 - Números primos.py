@@ -11,4 +11,4 @@ print(f'\n\033[mO número {numero} foi divisível {divisiveis_contador} vezes.')
 if numero != 1 and divisiveis_contador == 2:
         print(f'E por isso ele É PRIMO!')
 else:
-         print('E por isso ele NÃO É PRIMO!') 
+        print('E por isso ele NÃO É PRIMO!') 

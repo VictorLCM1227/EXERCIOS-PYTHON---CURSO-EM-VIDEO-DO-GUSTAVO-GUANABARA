@@ -3,8 +3,7 @@ from time import sleep
 print('''Suas opções:
 [0] PEDRA
 [1] PAPEL
-[2] TESOURA
-      ''')
+[2] TESOURA''')
 while True:
     jogada = int(input('Sua jogada: '))
     if jogada in (0, 1, 2):
