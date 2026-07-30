@@ -1,16 +1,11 @@
 
 alunos = []
 while True:
-    aluno = []
-    notas = []
     nome = input('Nome: ')
     nota1= float(input('Nota 1: '))
     nota2 = float(input('Nota 2: '))
-    aluno.append(nome)
-    notas.append(nota1)
-    notas.append(nota2)
-    aluno.append(notas)
-    alunos.append(aluno)
+    media = (nota1 + nota2) / 2
+    alunos.append([nome, [nota1, nota2], media])
     while True:
         continuar = input('Quer continuar? [S/N] ').strip().upper()[0]
         if continuar in 'SN':
@@ -20,11 +15,10 @@ while True:
         break
 
 print('-=' * 30)
-print(f'No. {"NOME":<10} MÉDIA')
+print(f'{"No.":<4}{"NOME":<10}{"MÉDIA":>8}')
 print('-' * 30)
-for numero, aluno in alunos:
-    media = (aluno[1][0] + aluno[1][1]) / 2
-    print(f'{numero} {aluno[0]:<10} {media:.2f}')
+for numero, aluno in enumerate(alunos):
+    print(f'{numero:<4} {aluno[0]:<10} {aluno[2]:>8.2f}')
 
 while True:
     print('-' * 30)
@@ -33,4 +27,7 @@ while True:
         print('FINALIZANDO...')
         print('<<< VOLTE SEMPRE >>>')
         break
-    print(f'As notas de {alunos[mostrar][0]} São {alunos[mostrar][1]}')
+    elif mostrar >= len(alunos) or mostrar < 0:
+        print('O número digitado não corresponde a nenhum aluno.')
+    else:
+        print(f'As notas de {alunos[mostrar][0]} São {alunos[mostrar][1]}')
