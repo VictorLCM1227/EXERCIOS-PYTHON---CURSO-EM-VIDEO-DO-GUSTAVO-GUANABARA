@@ -2,12 +2,14 @@
 alunos = []
 while True:
     aluno = []
+    notas = []
     nome = input('Nome: ')
     nota1= float(input('Nota 1: '))
     nota2 = float(input('Nota 2: '))
     aluno.append(nome)
-    aluno.append(nota1)
-    aluno.append(nota2)
+    notas.append(nota1)
+    notas.append(nota2)
+    aluno.append(notas)
     alunos.append(aluno)
     while True:
         continuar = input('Quer continuar? [S/N] ').strip().upper()[0]
@@ -21,7 +23,7 @@ print('-=' * 30)
 print(f'No. {"NOME":<10} MÉDIA')
 print('-' * 30)
 for numero, aluno in alunos:
-    media = (aluno[1] + aluno[20]) / 2
+    media = (aluno[1][0] + aluno[1][1]) / 2
     print(f'{numero} {aluno[0]:<10} {media:.2f}')
 
 while True:
@@ -31,4 +33,4 @@ while True:
         print('FINALIZANDO...')
         print('<<< VOLTE SEMPRE >>>')
         break
-    print(f'As notas de {alunos[mostrar][0]} São {alunos[mostrar][1]} e {alunos[mostrar][2]}')
+    print(f'As notas de {alunos[mostrar][0]} São {alunos[mostrar][1]}')
