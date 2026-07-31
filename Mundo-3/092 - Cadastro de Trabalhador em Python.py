@@ -5,7 +5,7 @@ pessoa = {}
 pessoa['nome'] = input('nome: ')
 nascimento = int(input('Ano de nascimento: '))
 ano_atual = datetime.today().year
-pessoa['idade'] = nascimento - ano_atual
+pessoa['idade'] = ano_atual - nascimento
 pessoa['carteira_de_trabalho'] = int(input('Carteira de trabalho (0 se não tem): '))
 if pessoa['carteira_de_trabalho'] > 0:
     pessoa['ano_de_contratacao'] = int(input('Ano de contratação: '))

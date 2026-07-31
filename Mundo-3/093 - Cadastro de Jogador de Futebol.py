@@ -8,7 +8,7 @@ partidas = int(input('Quantas partidas ele jogou? '))
 jogador['gols'] = []
 
 for partida in range(partidas):
-    jogador['gols'].append(int(input(f'Quantos gols na partida {partida}? ')))
+    jogador['gols'].append(int(input(f'Quantos gols na partida {partida + 1}? ')))
 
 
 for gol in jogador['gols']:
@@ -25,5 +25,5 @@ print('-=' * 30)
 
 print(f'O jogador {jogador["nome"]} jogou {partidas} partidas.')
 for partida in range(partidas):
-    print(f'    => Na partida {partida}, fez {jogador["gols"][partida]} gols.')
+    print(f'    => Na partida {partida + 1}, fez {jogador["gols"][partida]} gols.')
 print(f'Foi um total de {jogador["total"]} gols.')
