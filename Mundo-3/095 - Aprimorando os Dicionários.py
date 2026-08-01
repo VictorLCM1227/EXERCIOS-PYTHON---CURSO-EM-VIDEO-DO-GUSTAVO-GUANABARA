@@ -3,15 +3,12 @@ jogadores = []
 
 while True:
     jogador = {}
-    gols_total = 0
     jogador['nome'] = input('Nome do Jogador: ').strip()
     partidas = int(input(f'Quantas partidas {jogador["nome"]} jogou? '))
     jogador['gols'] = []
     for partida in range(partidas):
         jogador['gols'].append(int(input(f'Quantos gols na partida {partida + 1}? ')))
-    for gol in jogador['gols']:
-        gols_total += gol
-    jogador['total'] = gols_total
+    jogador['total'] = sum(jogador['gols'])
     jogadores.append(jogador)
 
     while True:
@@ -37,8 +34,7 @@ while True:
         print('Por favor digite o código de uma jogador existente.')
     if mostrar == 999:
         break
-    print(f' -- LEVANTAMENTO DO JOGADOR {jogadores[mostrar]["nome"]}:')
-    for partida in range(len(jogadores[mostrar]['gols'])):
-        print(f'No jogo {partida + 1} fez {jogadores[mostrar]["gols"][partida]} gols.')
-
-#terminar
+    jogador_escolhido = jogadores[mostrar]
+    print(f' -- LEVANTAMENTO DO JOGADOR {jogador_escolhido["nome"]}:')
+    for partida in range(len(jogador_escolhido['gols'])):
+        print(f'No jogo {partida + 1} fez {jogador_escolhido["gols"][partida]} gols.')
