@@ -1,12 +1,21 @@
 
-def fatorial(numero, show):
-    print('-' * 30)
-    for antecessor in range(numero - 1, 0, -1):
+def Fatorial(numero, show=False):
+    """
+    -> Calcula o Fatorial de um número.
+    :param numero: O número a ser calculado.
+    :param show: (opcional) Mostrar ou não a conta.
+    :return: O valor do Fatorial de um número n.
+    """
+    fatorial = 1
+    for antecessor in range(numero, 0, -1):
         if show:
-            print(antecessor, end=' x ')
-        numero *= antecessor
-    return numero
+            if antecessor > 1:
+                print(antecessor, end=' x ')
+            else:
+                print(antecessor, end=' = ')
+        fatorial *= antecessor
+    return fatorial
 
 
-
-print(fatorial(5, show=True))
+print('-' * 30)
+print(Fatorial(5, show=True))
