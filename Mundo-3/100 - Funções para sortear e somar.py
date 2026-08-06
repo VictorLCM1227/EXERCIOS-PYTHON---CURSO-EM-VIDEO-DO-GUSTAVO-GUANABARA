@@ -1,10 +1,8 @@
 from random import randint
 from time import sleep
 
-numeros = []
 
-def sorteia():
-    global numeros
+def sorteia(numeros):
     print('Sorteando 5 valores da lista:', end=' ')
     for numero in range(5):
         while True:
@@ -17,13 +15,13 @@ def sorteia():
     print('PRONTO!')
 
 
-def somaPar():
-    global numeros
+def somaPar(numeros):
     soma = 0
     for numero in numeros:
         if numero % 2 == 0:
             soma += numero
     print(f'Somando os valores pares de {numeros} temos {soma}')
 
-sorteia()
-somaPar()
+numeros = []
+sorteia(numeros)
+somaPar(numeros)
