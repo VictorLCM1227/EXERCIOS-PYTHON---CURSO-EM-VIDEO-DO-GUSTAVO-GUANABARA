@@ -12,8 +12,9 @@ def maior(*numeros):
     else:
         maior_informado = 0
         quantidade = 0
+    print(f'Foram informados {quantidade} valores ao todo.')
     print(f'O maior valor informado foi {maior_informado}.')
-    print(f'Foram informados {quantidade} ao todo.')
+    
 
 maior(2, 9, 4, 5, 7, 1)
 maior(4, 7, 0)
