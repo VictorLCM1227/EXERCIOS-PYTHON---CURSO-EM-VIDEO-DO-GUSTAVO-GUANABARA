@@ -12,6 +12,6 @@ gols = input('Número de gols: ').strip()
 if not gols or not gols.isnumeric():
     gols = 0
 else:
-        gols = int(gols)
+    gols = int(gols)
 
 ficha(nome, gols)
