@@ -9,10 +9,9 @@ if not nome:
     nome = '< DESCONHECIDO >'
 
 gols = input('Número de gols: ').strip()
-if not gols:
+if not gols or not gols.isnumeric():
     gols = 0
 else:
-    if gols.isalpha():
         gols = int(gols)
 
 ficha(nome, gols)
