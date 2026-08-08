@@ -4,15 +4,13 @@ from time import sleep
 
 arq = 'cursoemvideo.txt'
 
-if arquivoExiste(arq):
-    print('Arquivo encontado com sucesso!')
-else:
-    print('Arquivo não encontrado!')
+if not arquivoExiste(arq):
+    criarArquivo(arq)
 
 while True:
     resposta = menu(['Ver Pessoas Cadastradas', 'Cadastrar nova Pessoa', 'Sair do Sistema'])
     if resposta == 1:
-        cabecalho('Opção 1')
+        lerArquivo(arq)
     elif resposta == 2:
         cabecalho('Opção 1')
     elif resposta == 3:
