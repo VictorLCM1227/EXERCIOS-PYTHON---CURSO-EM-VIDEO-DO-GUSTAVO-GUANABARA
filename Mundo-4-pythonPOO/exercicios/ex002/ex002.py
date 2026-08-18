@@ -36,3 +36,5 @@ print(g1.__doc__)
 
 print(g1.__getstate__())
 print(g1.__dict__)
+
+print(g1.__class__)
