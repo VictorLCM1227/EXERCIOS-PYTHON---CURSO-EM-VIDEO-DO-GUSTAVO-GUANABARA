@@ -1,3 +1,6 @@
+from rich import print
+from rich import inspect
+
 class ContaBancaria:
     """
     Cria uma conta bancária e permiete fazer saques e depósitos
@@ -29,3 +32,8 @@ c1 = ContaBancaria(id=112, nome='victor', saldo=3000)
 c1.depositar(500)
 c1.sacar(2000000)
 print(c1)
+
+
+c = ContaBancaria(111, 'José', 500)
+
+inspect(c)
