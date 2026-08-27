@@ -15,9 +15,9 @@ def criarArquivo(nome):
         a = open(nome, 'wt+')
         a.close()
     except:
-        print('Hoouve um ERRO na criação do arquivo!')
+        print('Houve um ERRO na criação do arquivo!')
     else:
-        print(f'Arquivo  {nome} criado com sucesso!')
+        print(f'Arquivo {nome} criado com sucesso!')
 
 
 def lerArquivo(nome):
